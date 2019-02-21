@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Pokemon code test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+    <h1 class="navbar-brand" id="title">Loading..</h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" onclick="toggleNavigation('navigation')" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse" id="navigation">
+        <form class="form-inline ml-auto my-2 my-lg-0" id="filterForm" onsubmit="formChanges('filterForm'); return false;">
+            <label for="filter" class="sr-only">Filter by name</label>
+            <input class="form-control mr-sm-2" type="number" placeholder="Page number" aria-label="Page" id="page" name="page" value="0" min="0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Filter by name" aria-label="Filter" id="filter" name="filter">
+            <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Filter</button>
+        </form>
+    </div>
+</nav>
+<section class="container-fluid">
+
+    <div class="row justify-content-center" id="pokemons">
+
+    </div>
+</section>
+<!--
+    This is solely for the purpose of demonstration.
+    Using in-browser babel transformer is actually a horrible practice and shouldn't ever be used in production.
+    In a real environment, Babel would build code ready for PRODUCTION using webpack, parcel ..etc
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+<script src="./js/index.js" type="text/babel"></script>
+</body>
+</html>
