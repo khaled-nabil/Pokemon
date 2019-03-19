@@ -1,18 +1,14 @@
-const parseURL = () => {
+import NotFound404 from "../views/notFound404.js"
+import parseURL from "./parser.js"
 
-    let url = location.hash.slice(1).toLowerCase() || '/';
-    let fragments = url.split("/");
-    return {
-        resource: fragments[1] || '',
-        id: fragments[2] || '',
-    };
-};
-const router = async (routes) => {
+const router = async (app, routes, data = {}) => {
     let request = parseURL();
     let url  = `/${request.resource}`;
-    if(Number.isInteger(request.id))
+    if(request.id && !isNaN(request.id))
         url += `/:num`;
-    console.log(url);
-    return routes[url] || NotFound404
+    app.innerHTML = "";
+    let comp =  routes[url] || NotFound404;
+    app.innerHTML = await comp.render(data);
+    comp.run(data);
 };
 export default router;
