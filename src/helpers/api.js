@@ -1,7 +1,6 @@
 // Generic form to get URL path
 export const getURL = async (path) => {
     return fetch(path).then(e => e.json()).then(result => result).catch(error => {
-        console.error(error);
         return {}
     });
 };

@@ -1,9 +1,10 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
+    entry: ['whatwg-fetch',"@babel/polyfill", "./src/"],
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(js)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader"
@@ -18,6 +19,9 @@ module.exports = {
                 ]
             }
         ]
+    },
+    devServer: {
+        disableHostCheck: true
     },
     plugins: [
         new HtmlWebPackPlugin({

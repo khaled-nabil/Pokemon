@@ -14,4 +14,4 @@ run `npm install` to install webpack and babel dependencies.
 
 ## Run
 
-use `npm start` to run the code in dev, `npm build` to create build, and `npm test` to run tests using Jest
+use `npm start` to run the code in dev, `npm run build` to create build, and `npm test` to run tests using Jest
