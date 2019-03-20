@@ -1,7 +1,7 @@
 # The project
 This project utilizes Pokemon API service (https://pokeapi.co/docs/v2.html/) to print out Pokemon species and some information about them.
 
-The code uses Vanilla JS, thus no need for setup :)
+The code uses Vanilla JS with webpack v4 for code-splitting and Jest for JavaScript Unit testing
 
 ## Features 
 1) Fetch through pagination different Pokemon species.
