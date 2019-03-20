@@ -12,7 +12,7 @@ class Pokemon {
 
     // Get generation id
     get generation() {
-        const chainLength = this.chain.length;
+        let chainLength = this.chain.length;
         return this.chain.substring(this.chain.substring(0, chainLength - 1).lastIndexOf("/") + 1, chainLength - 1);
     }
 

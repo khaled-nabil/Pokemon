@@ -4,7 +4,7 @@
   "description": "sample code using VanillaJS that renders pokemons from API",
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js",
+    "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
     "test": "jest test"
   },

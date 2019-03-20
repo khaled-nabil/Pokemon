@@ -1,6 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
-    entry: ['whatwg-fetch',"@babel/polyfill", "./src/"],
+    entry: ['whatwg-fetch',"@babel/polyfill", "./src"],
     module: {
         rules: [
             {

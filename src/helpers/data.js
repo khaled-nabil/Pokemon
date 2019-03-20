@@ -3,7 +3,7 @@ import Pokemon from "../schemas/pokemon.js"
 
 // Will take an array of species and return a mapped array Pokemon objects
 export const createPokemonObjects = async (speciesArray) => {
-    const allSpecies = await speciesArray.map(async species => {
+    let allSpecies = await speciesArray.map(async species => {
         let speciesDetails = await getURL(species.url);
         return new Pokemon(Object.assign({}, species, speciesDetails));
     });
